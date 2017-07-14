@@ -51,321 +51,255 @@
       </div>
     </nav>
     <div class="container">
-
       <div class="starter-template">
         <h1>TSP Algorithms Visualizations</h1>
-        <p class="lead">I have displayed visualizations of several inputs of data. I am using data from the <a href = "http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/index.html"> TSPLIB </a> as input and the Hamiltonian paths we create as outputs. I am focusing on the visualizations of the paths created by the Nearest Neighbor, Greedy, Convex Hull, and Christofides algorithms. The last visualization corresponds to that of the optimal path. Code for the computation of the paths and visualizations can be found <a href = "https://github.com/chriski777/graph_algorithms"> here. </a> <br> For the graphs, the % difference is calculated by abs(optimal path length - algorithm path length)/ optimal path length.</p>
+        <p class="lead">I have displayed visualizations of several inputs of data. I am using data from the <a href = "http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/index.html"> TSPLIB </a> as input and the Hamiltonian paths we create as outputs. I am focusing on the visualizations of the paths created by the Nearest Neighbor, Greedy, Convex Hull, and Christofides algorithms. The last visualization corresponds to that of the optimal path. Code for the computation of the paths and visualizations can be found <a href = "https://github.com/chriski777/graph_algorithms"> here. </a> <br> For the graphs, the % difference is calculated by abs(optimal path length - algorithm path length)/ optimal path length. For the first and last dataset, I used the adjacency matrix provided with the TSP instance. For the rest
+        of the data sets, I calculated the adjacency matrix based on euclidean distance.</p> 
       </div>
-
     </div><!-- /.container -->
     <div class="vidcontainer">
       <h1> 1. P01 (15 nodes) </h1>
         <p class="lead"> Our smallest dataset that I tested. Below are the algorithms and their respective costs. </p>
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/Optimal.mp4" controls></video>
-              <figcaption>Optimal Solution</figcaption>
-              <figcaption>Cost: 219, % Difference = 0%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/Optimal.mp4" controls></video>
-              <figcaption>Nearest Neighbor</figcaption>
-              <figcaption>Cost: 219, % Difference = 0%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/Greedy.mp4" controls></video>
-              <figcaption>Greedy</figcaption>
-              <figcaption>Cost: 219, % Difference = 0%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/ConvHull.mp4" controls></video>
-              <figcaption>Convex Hull</figcaption>
-              <figcaption>Cost: 219, % Difference = 0%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video width = "100%"  src="videos/p01/Optimal.mp4" controls></video>
+            <figcaption>Optimal Solution</figcaption>
+            <figcaption>Cost: 219, % Difference = 0%</figcaption> 
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/p01/NearestNeighbor.mp4" controls></video>
+            <figcaption>Nearest Neighbor</figcaption>
+            <figcaption>Cost: 219, % Difference = 0%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/p01/Greedy.mp4" controls></video>
+            <figcaption>Greedy</figcaption>
+            <figcaption>Cost: 219, % Difference = 0%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/p01/ConvHull.mp4" controls></video>
+            <figcaption>ConvHull</figcaption>
+            <figcaption>Cost: 219, % Difference = 0%</figcaption>
+          </figure>          
         </div>
         <p class="lead"> The next four vids show the performance of Christofides on the dataset.
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/MST.mp4" controls></video>
-              <figcaption>MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/MW.mp4" controls></video>
-              <figcaption>MW</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/Tour.mp4" controls></video>
-              <figcaption>Eulerian Tour of the union of MW and MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/p01/Answer.mp4" controls></video>
-              <figcaption>Christofides Approximation</figcaption>
-              <figcaption>Cost: 319, % Difference = 45.6%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video width = "100%"  src="videos/p01/MST.mp4" controls></video>
+            <figcaption>Minimum</figcaption>
+            <figcaption> Spanning Tree</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/p01/MW.mp4" controls></video>
+            <figcaption>Minimum Weight </figcaption>
+            <figcaption>Perfect Matching </figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/p01/Tour.mp4" controls></video>
+            <figcaption>Eulerian Tour of the union </figcaption>
+            <figcaption>of MW and MST</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/p01/Answer.mp4" controls></video>
+            <figcaption>Christofides Approximation</figcaption>
+            <figcaption>Cost: 219, % Difference = 0%</figcaption>
+          </figure>
         </div>
     </div><!-- /.container -->
     <div class="vidcontainer">
       <h1> 2. ATT48 (48 nodes) </h1>
         <p class="lead"> A dataset containing 48 of the US state capitals. Below are the algorithms and their respective costs. </p>
         <div class = "row">
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/att48/OptimalMov.mp4" controls></video>
+              <video width = "100%"  src="videos/att48/OptimalMov.mp4" controls></video>
               <figcaption>Optimal Solution</figcaption>
-              <figcaption>Cost: 33280, % Difference = 0%</figcaption>
+              <figcaption>Cost: 33,523.708, % Difference = 0%</figcaption>
             </figure>
-          </div>
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/att48/NearestNeighborMov.mp4" controls></video>
+              <video width = "100%"  src="videos/att48/NearestNeighborMov.mp4" controls></video>
               <figcaption>Nearest Neighbor</figcaption>
-              <figcaption>Cost: 44381, % Difference = 33.356%</figcaption>
+              <figcaption>Cost: 42,156.22, % Difference = 25.76%</figcaption>
             </figure>
-          </div>
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/att48/GreedyMov.mp4" controls></video>
+              <video width = "100%"  src="videos/att48/GreedyMov.mp4" controls></video>
               <figcaption>Greedy</figcaption>
-              <figcaption>Cost: 36923, % Difference = 10.94%</figcaption>
+              <figcaption>Cost: 40,160.36, % Difference = 19.8%</figcaption>
             </figure>
-          </div>
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/att48/ConvHullMov.mp4" controls></video>
+              <video width = "100%"  src="videos/att48/ConvHullMov.mp4" controls></video>
               <figcaption>Convex Hull</figcaption>
-              <figcaption>Cost: 35381, % Difference = 6.3%</figcaption>
+              <figcaption>Cost: 34,552.71, % Difference = 3.06%</figcaption>
             </figure>
-          </div>
         </div>
         <p class="lead"> The next four vids show the performance of Christofides on the dataset.
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/att48/MST.mp4" controls></video>
-              <figcaption>MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/att48/MW.mp4" controls></video>
-              <figcaption>MW</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/att48/Tour.mp4" controls></video>
-              <figcaption>Eulerian Tour of the union of MW and MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/att48/Answer.mp4" controls></video>
-              <figcaption>Christofides Approximation</figcaption>
-              <figcaption>Cost: 37381, % Difference = 45.6%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video width = "100%"  src="videos/att48/MST.mp4" controls></video>
+            <figcaption>Minimum </figcaption>
+            <figcaption>Spanning Tree </figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/att48/MW.mp4" controls></video>
+            <figcaption>Minimum Weight</figcaption>
+            <figcaption>Perfect Matching</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/att48/Tour.mp4" controls></video>
+            <figcaption>Eulerian Tour of the union </figcaption>
+            <figcaption>of MW and MST</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/att48/Answer.mp4" controls></video>
+            <figcaption>Christofides Approximation</figcaption>
+            <figcaption>Cost: 37,381, % Difference = 16.02%</figcaption>
+          </figure>
         </div>
     </div><!-- /.container -->
     <div class="vidcontainer">
       <h1> 3. ch150 (150 nodes) </h1>
         <p class="lead"> A dataset involving 150 mining locations. Below are the algorithms and their respective costs. </p>
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/Optimal.mp4" controls></video>
-              <figcaption>Optimal Solution</figcaption>
-              <figcaption>Cost: 68,201 , % Difference = 0%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/NearestNeighbor.mp4" controls></video>
-              <figcaption>Nearest Neighbor</figcaption>
-              <figcaption>Cost: 94,231 , % Difference = 38.16%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/Greedy.mp4" controls></video>
-              <figcaption>Greedy</figcaption>
-              <figcaption>Cost: 86,321, % Difference = 26.6%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/ConvHull.mp4" controls></video>
-              <figcaption>Convex Hull</figcaption>
-              <figcaption>Cost: 83,923, % Difference = 23.05%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video width = "100%"  src="videos/ch150/Optimal.mp4" controls></video>
+            <figcaption>Optimal Solution</figcaption>
+            <figcaption>Cost: 6,532.28 , % Difference = 0%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/ch150/NearestNeighbor.mp4" controls></video>
+            <figcaption>Nearest Neighbor</figcaption>
+            <figcaption>Cost: 7,675.33, % Difference = 17.5%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/ch150/Greedy.mp4" controls></video>
+            <figcaption>Greedy</figcaption>
+            <figcaption>Cost: 7,743.035, % Difference = 18.54%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/ch150/ConvHull.mp4" controls></video>
+            <figcaption>Convex Hull</figcaption>
+            <figcaption>Cost: 6,916.077, % Difference = 5.87%</figcaption>
+          </figure>
         </div>
         <p class="lead"> The next four vids show the performance of Christofides on the dataset.
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/MST.mp4" controls></video>
-              <figcaption>MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/MW.mp4" controls></video>
-              <figcaption>MW</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/Tour.mp4" controls></video>
-              <figcaption>Eulerian Tour of the union of MW and MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/ch150/Answer.mp4" controls></video>
-              <figcaption>Christofides Approximation</figcaption>
-              <figcaption>Cost: 73,423 , % Difference = 7.6%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video width = "100%"  src="videos/ch150/MST.mp4" controls></video>
+            <figcaption>Minimum </figcaption>
+            <figcaption>Spanning Tree</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/ch150/MW.mp4" controls></video>
+            <figcaption>Minimum Weight</figcaption>
+            <figcaption>Perfect Matching</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/ch150/Tour.mp4" controls></video>
+            <figcaption>Eulerian Tour of the union </figcaption>
+            <figcaption>of MW and MST</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/ch150/Answer.mp4" controls></video>
+            <figcaption>Christofides Approximation</figcaption>
+            <figcaption>Cost: 7,172.75 , % Difference = 9.8%</figcaption>
+          </figure>
         </div>
     </div><!-- /.container -->
     <div class="vidcontainer">
       <h1> 4. a288 (150 nodes) </h1>
         <p class="lead"> A dataset involving 288 city locations. Below are the algorithms and their respective costs. </p>
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/a288/Optimal.mp4" controls></video>
-              <figcaption>Optimal Solution</figcaption>
-              <figcaption>Cost: 96,023 , % Difference = 0%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/a288/NearestNeighbor.mp4" controls></video>
-              <figcaption>Nearest Neighbor</figcaption>
-              <figcaption>Cost: 132,402 , % Difference = 37.88%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/a288/Greedy.mp4" controls></video>
-              <figcaption>Greedy</figcaption>
-              <figcaption>Cost: 129,402, % Difference = 34.8%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video width = "400"  src="videos/a288/ConvHull.mp4" controls></video>
-              <figcaption>Convex Hull</figcaption>
-              <figcaption>Cost: 99,471, % Difference = 3.59%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video width = "100%"  src="videos/a288/Optimal.mp4" controls></video>
+            <figcaption>Optimal Solution</figcaption>
+            <figcaption>Cost: 2,586.769 , % Difference = 0%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/a288/NearestNeighbor.mp4" controls></video>
+            <figcaption>Nearest Neighbor</figcaption>
+            <figcaption>Cost: 4,991.03, % Difference = 9.3%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/a288/Greedy.mp4" controls></video>
+            <figcaption>Greedy</figcaption>
+            <figcaption>Cost: 3,115.26, % Difference = 20.4%</figcaption>
+          </figure>
+          <figure>
+            <video width = "100%"  src="videos/a288/ConvHull.mp4" controls></video>
+            <figcaption>Convex Hull</figcaption>
+            <figcaption>Cost:2,726.97 , % Difference = 5.4%</figcaption>
+          </figure>
         </div>
         <p class="lead"> The next four vids show the performance of Christofides on the dataset.
         <div class = "row">
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/a288/MST.mp4" controls></video>
-              <figcaption>MST</figcaption>
+              <video width = "100%"  src="videos/a288/MST.mp4" controls></video>
+              <figcaption>Minimum</figcaption>
+              <figcaption>Spanning Tree</figcaption>
             </figure>
-          </div>
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/a288/MW.mp4" controls></video>
-              <figcaption>MW</figcaption>
+              <video width = "100%"  src="videos/a288/MW.mp4" controls></video>
+              <figcaption>Minimum Weight </figcaption>
+              <figcaption>Perfect Matching</figcaption>
             </figure>
-          </div>
-          <div class = "videos">
             <figure>
-              <video width = "400"  src="videos/a288/Tour.mp4" controls></video>
-              <figcaption>Eulerian Tour of the union of MW and MST</figcaption>
+              <video width = "100%"  src="videos/a288/Tour.mp4" controls></video>
+              <figcaption>Eulerian Tour of the union </figcaption>
+              <figcaption>of MW and MST</figcaption>
             </figure>
-          </div>
-          <div class = "videos">
             <figure>
-              <video class = "vid" width = "400"  src="videos/a288/answer.mp4" controls></video>
+              <video width="100%" src="videos/a288/answer.mp4" controls></video>
               <figcaption>Christofides Approximation</figcaption>
-              <figcaption>Cost: 99,473 , % Difference = 3.6%</figcaption>
+              <figcaption>Cost: 2,909.32, % Difference = 12.4%</figcaption>
             </figure>
-          </div>
         </div>
     </div><!-- /.container -->
     <div class="vidcontainer">
       <h1> Extra DataSets (Not included in data! Just done for fun!) pcb442 (442 nodes) </h1>
         <p class="lead"> A dataset involving 442 city locations. Below are the algorithms and their respective costs. </p>
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/Optimal.mp4" controls></video>
-              <figcaption>Optimal Solution</figcaption>
-              <figcaption>Cost: 50,784 , % Difference = 0%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/NearestNeighbor.mp4" controls></video>
-              <figcaption>Nearest Neighbor</figcaption>
-              <figcaption>Cost: 107,213 , % Difference = 111.11%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/Greedy.mp4" controls></video>
-              <figcaption>Greedy</figcaption>
-              <figcaption>Cost: 63,540, % Difference = 25.112%</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/ConvHull.mp4" controls></video>
-              <figcaption>Convex Hull</figcaption>
-              <figcaption>Cost: 54,249, % Difference = 6.82%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/Optimal.mp4" controls></video>
+            <figcaption>Optimal Solution</figcaption>
+            <figcaption>Cost: 50,784 , % Difference = 0%</figcaption>
+          </figure>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/NearestNeighbor.mp4" controls></video>
+            <figcaption>Nearest Neighbor</figcaption>
+            <figcaption>Cost: 107,213 , % Difference = 111.11%</figcaption>
+          </figure>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/Greedy.mp4" controls></video>
+            <figcaption>Greedy</figcaption>
+            <figcaption>Cost: 63,540, % Difference = 25.112%</figcaption>
+          </figure>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/ConvHull.mp4" controls></video>
+            <figcaption>Convex Hull</figcaption>
+            <figcaption>Cost: 54,249, % Difference = 6.82%</figcaption>
+          </figure>
         </div>
         <p class="lead"> The next four vids show the performance of Christofides on the dataset.
         <div class = "row">
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/MST.mp4" controls></video>
-              <figcaption>MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/MW.mp4" controls></video>
-              <figcaption>MW</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video class = "vid" width = "400"  src="videos/pcb442/Tour.mp4" controls></video>
-              <figcaption>Eulerian Tour of the union of MW and MST</figcaption>
-            </figure>
-          </div>
-          <div class = "videos">
-            <figure>
-              <video id = "vid" width = "400"  src="videos/pcb442/Answer.mp4" controls></video>
-              <figcaption>Christofides Approximation</figcaption>
-              <figcaption>Cost: 56,388 , % Difference = 11.6%</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/MST.mp4" controls></video>
+            <figcaption>Minimum</figcaption>
+            <figcaption>Spanning Tree</figcaption>
+          </figure>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/MW.mp4" controls></video>
+            <figcaption>Minimum Weight</figcaption>
+            <figcaption>Perfect Matching</figcaption>
+          </figure>
+          <figure>
+            <video class = "vid" width = "100%"  src="videos/pcb442/Tour.mp4" controls></video>
+            <figcaption>Eulerian Tour of the union </figcaption>
+            <figcaption>of MW and MST</figcaption>
+          </figure>
+          <figure>
+            <video id = "vid" width = "100%"  src="videos/pcb442/Answer.mp4" controls></video>
+            <figcaption>Christofides Approximation</figcaption>
+            <figcaption>Cost: 56,388 , % Difference = 11.6%</figcaption>
+          </figure>
         </div>
     </div><!-- /.container -->
     <footer >
